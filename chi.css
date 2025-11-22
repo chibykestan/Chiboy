@@ -1,0 +1,95 @@
+:root{
+    --bg: #fafafa;
+    --card: #ffffff;
+    --primary: #1e4db7;
+    --accent: #d97706;
+    --text: #0f172a;
+    --muted: #6b7280;
+    --border: #e6edf3;
+    --radius: 8px;
+}
+
+*{box-sizing:border-box}
+html,body{height:100%}
+body{
+    margin:0;
+    font-family: 'Ubuntu', system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+    background:var(--bg);
+    color:var(--text);
+    line-height:1.6;
+    -webkit-font-smoothing:antialiased;
+    -moz-osx-font-smoothing:grayscale;
+    padding:1rem;
+}
+
+/* Links */
+a{color:var(--primary);text-decoration:none}
+a:hover{color:#163a8a;text-decoration:underline}
+
+/* Navbar tweaks (works with Bootstrap markup already present) */
+.navbar{padding:.6rem 1rem}
+.navbar-brand{font-weight:700;color:#fff;font-size:1.25rem}
+.navbar .navbar-item{margin:0 .25rem}
+.navbar .navbar-link{color:rgba(255,255,255,0.9);padding:.35rem .5rem}
+.navbar .navbar-link:hover{color:#fff;background:rgba(255,255,255,0.04);border-radius:4px}
+
+/* Page container */
+.section{max-width:1100px;margin:0 auto}
+
+/* Top three-column area */
+.tren{display:flex;gap:1rem;align-items:flex-start;margin:1.5rem 0;flex-wrap:wrap}
+#two,#tom,#ten{background:var(--card);border:1px solid var(--border);padding:1rem;border-radius:var(--radius);box-shadow:0 1px 2px rgba(16,24,40,0.03)}
+#two{flex:1 1 220px}
+#tom{flex:2 1 420px}
+#ten{flex:1 1 220px}
+#tom img{max-width:100%;height:auto;display:block;margin:.5rem 0;border-radius:6px}
+
+/* Services rows */
+.jim{display:flex;gap:1rem;flex-wrap:wrap;margin:1rem 0}
+#art,#see,#son{flex:1 1 300px;background:var(--card);border:1px solid var(--border);padding:1rem;border-radius:var(--radius)}
+.dre{overflow:hidden;border-radius:6px}
+.dre img{width:100%;height:160px;object-fit:cover;display:block}
+
+.set{display:flex;gap:1rem;margin:1rem 0;flex-wrap:wrap}
+#met,#de{flex:1 1 45%;min-width:260px;background:var(--card);padding:1rem;border:1px solid var(--border);border-radius:var(--radius)}
+
+.ted,.ace{display:flex;gap:1rem;flex-wrap:wrap}
+#key,#aye,#saw,#don{flex:1 1 300px;background:var(--card);padding:1rem;border:1px solid var(--border);border-radius:var(--radius)}
+
+/* Headings & text */
+h1,h2,h3,h4{margin:.5rem 0;text-align:center}
+h2{font-size:clamp(1.25rem,2.5vw,1.75rem);color:var(--primary)}
+h3{font-size:1.05rem;margin-top:0}
+p{color:var(--muted);margin:.5rem 0;text-align:left}
+
+/* Contact / footer */
+.me{width:100%;padding:1rem;margin-top:1rem;color:var(--muted);text-align:center}
+footer{margin-top:.75rem}
+.social-icon{margin:.25rem;color:var(--muted)}
+.social-icon:hover{color:var(--primary)}
+
+/* Utilities */
+img{max-width:100%;height:auto;display:block}
+hr{border:none;border-top:1px solid var(--border);margin:1rem 0}
+
+/* Accessibility and small tweaks */
+#tex{text-align:left}
+#art h3,#see h3,#son h3,#met h3,#de h3,#key h3,#aye h3,#saw h3,#don h3{text-align:center}
+
+/* Responsive adjustments */
+@media (max-width:800px){
+    .tren,.jim,.set,.ted,.ace{flex-direction:column}
+    body{padding:.75rem}
+    .navbar-brand{font-size:1rem}
+    .navbar .navbar-item{margin:.25rem 0}
+    .dre img{height:180px}
+}
+
+/* small screens: increase tap targets */
+@media (max-width:480px){
+    .navbar .navbar-link{padding:.6rem .75rem}
+}
+
+/* Legacy ID support (keeps look similar to original intent) */
+#sta{text-align:center;color:chocolate}
+
